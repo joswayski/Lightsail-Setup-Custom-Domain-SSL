@@ -54,3 +54,19 @@ Add the name servers that Amazon provides you to your domain in your domain `DNS
 
 ![ns](images/namesrvr.png)
 ![gd](images/gdns.png)
+
+Go back to the homepage and click the terminal icon to `SSH` into your instance. Your instance should be up and running by now.
+
+![ssh](images/ssh.png)
+
+Go into htdocs
+
+`cd htdocs`
+
+Delete everything inside
+
+`rm -rf *`
+
+![dlt](images/dlt.png)
+
+Clone this very repository!
