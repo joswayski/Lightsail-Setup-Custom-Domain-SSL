@@ -55,6 +55,14 @@ Add the name servers that Amazon provides you to your domain in your domain `DNS
 ![ns](images/namesrvr.png)
 ![gd](images/gdns.png)
 
+Go back to your instance networking settings and create a firewall rule so that we can do a quick connection test in a few steps
+
+![int](images/inet.png)
+
+`custom TCP on port 3000` - You can delete this later after your site is up
+
+![poot](images/tcprule.png)
+
 Go back to the homepage and click the terminal icon to `SSH` into your instance. Your instance should be up and running by now.
 
 ![ssh](images/ssh.png)
@@ -70,3 +78,20 @@ Delete everything inside
 ![dlt](images/dlt.png)
 
 Clone this very repository!
+
+`git clone https://github.com/joswayski/Lightsail-Setup-Custom-Domain-SSL.git`
+
+Go into the repository folder
+
+`cd Lightsail-Setup-Custom-Domain-SSL`
+
+Install the dependencies
+
+`npm install`
+
+![installed](images/installed.png)
+
+Run the app to test it!
+
+`node index.js`
+Feel free to delete the firewall rule on port 3000 we created earlier. Do not hesitate for any PR's or issues. Happy developing!
