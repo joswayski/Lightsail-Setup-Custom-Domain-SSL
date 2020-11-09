@@ -89,7 +89,7 @@ Install the dependencies
 
 `npm install`
 
-![installed](images/installed.png)
+![installed](images/i.png)
 
 Run the app to test it!
 
@@ -174,7 +174,43 @@ You will be able to visit your site without putitng the port number at the end!
 
 ![noport](images/noport.png)
 
-## #TODO Add SSL and custom domain
+To get your SSL certificate (fix that _Not Secure_ in your browser), run:
+
+`sudo /opt/bitnami/bncert-tool`
+
+> You will be prompted to enter this again, paste it in the terminal and run it again
+
+![twicerun](images/twicerun.png)
+
+You will then be prompted to enter the domain that you chose, enter `www.yourdomain.com` and `yourdomain.com`
+
+![dom](images/dom.png)
+
+- _Enable HTTP to HTTPS redirection [Y/n]:_ `Y`
+
+- _Enable non-www to www redirection [Y/n]:_
+
+> Up to you, I usually say `Y` because it looks more "professional"
+
+- _Enable www to non-www redirection [Y/n]:_ `N`
+
+> Again, personal preference. I say `N` to this
+
+- _Do you agree to these changes? [Y/n]:_ `Y`
+
+Enter your email and hit `Y` on the following prompts. This will take a minute.
+
+![donezo](images/emial.png)
+
+Go back to our app and run the server forever!
+
+`cd /home/bitnami/htdocs/Lightsail-Setup-Custom-Domain-SSL`
+
+`forever start index.js`
+
+Your server is up and running on your custom domain with SSL! Congrats!
+
+![fin](images/fin.png)
 
 ---
 
