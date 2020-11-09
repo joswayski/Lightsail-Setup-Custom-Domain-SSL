@@ -1,10 +1,10 @@
 # Deploy a Node / Express app on AWS Lightsail with a Custom Domain + SSL
 
--------------> [Video Tutorial](https://www.youtube.com/watch?v=rtshCulV2hk) <-------------
+-------------> [Video Tutorial (_10 min_)](https://www.youtube.com/watch?v=rtshCulV2hk) <-------------
 
 ### Steps below if you prefer images
 
-- Create a Lightsail instance from the **_[AWS dashboard](https://lightsail.aws.amazon.com/ls/webapp/home/instances)_**
+- Create a Lightsail instance from the **[AWS dashboard](https://lightsail.aws.amazon.com/ls/webapp/home/instances)**
 
 ![Dashboard Image](images/dash1.png)
 
@@ -22,3 +22,13 @@
 - Attach the static IP you just created to your instance
 
 ![attachIP](images/attachIP.png)
+
+- Go back [home](https://lightsail.aws.amazon.com/ls/webapp/home/instances) and click on [networking](https://lightsail.aws.amazon.com/ls/webapp/home/networking) so that you arrive at this tab
+
+![networktab](images/networking.png)
+
+- Click on **_Create DNS zone_** and enter your domain here
+
+![domain](images/domain.png)
+
+> I personally use [Google Domains](https://domains.google.com/registrar/) to buy my domains but if you prefer to stay in the ecosystem, Amazon has their own solution called [Route53](https://aws.amazon.com/route53/)
