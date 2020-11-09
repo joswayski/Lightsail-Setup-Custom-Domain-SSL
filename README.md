@@ -32,7 +32,7 @@ Go back [home](https://lightsail.aws.amazon.com/ls/webapp/home/instances) and cl
 
 ![networktab](images/networking.png)
 
-Click on **_Create DNS zone_** and enter your domain here
+Click on `Create DNS zone` and enter your domain here
 
 ![domain](images/domain.png)
 
@@ -116,6 +116,8 @@ Type `i` for `INSERT` mode
 
 Visit [this link](https://docs.bitnami.com/ibm/infrastructure/nodejs/administration/create-custom-application-nodejs/) and copy this code for port 80
 
+> NOTE: If you would like to use another port in your app, make sure that you change the `http://localhost:3000` line to `http://localhost:YOUR_PORT_NUMBER` as well, in this section and the one coming up
+
 ![bitnami1](images/bitnami1.png)
 
 ### IMPORTANT:
@@ -144,7 +146,7 @@ Now do the same thing for the other port:
 
 `i` to enter `INSERT` mode
 
-Copy and paste the second part
+Copy and paste the second part for port 443
 
 ![bitnami2](images/bitnami2.png)
 
