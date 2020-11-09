@@ -1,34 +1,48 @@
 # Deploy a Node / Express app on AWS Lightsail with a Custom Domain + SSL
 
--------------> [Video Tutorial (_10 min_)](https://www.youtube.com/watch?v=rtshCulV2hk) <-------------
+[Video Tutorial (_10 min_)](https://www.youtube.com/watch?v=rtshCulV2hk)
+
+---
 
 ### Steps below if you prefer images
 
-- Create a Lightsail instance from the **[AWS dashboard](https://lightsail.aws.amazon.com/ls/webapp/home/instances)**
+Create a Lightsail instance from the **[AWS dashboard](https://lightsail.aws.amazon.com/ls/webapp/home/instances)**
 
 ![Dashboard Image](images/dash1.png)
 
-- Choose your instance type
+Choose your instance type
 
-**_Linux & Node_**
+`Linux & Node`
+
 ![Instance type](images/instanceType.png)
 
-- Wait for the instance to be created
-  ![Wait](images/waiting.png)
+Wait for the instance to be created
 
-- In the meantime, go to the **_Networking_** tab and create a static IP
-  ![Static](images/static.png)
+![Wait](images/waiting.png)
 
-- Attach the static IP you just created to your instance
+In the meantime, go to the `Networking` tab and click on `Create static IP`
+
+![Static](images/static.png)
+
+Attach the static IP you just created to your instance
 
 ![attachIP](images/attachIP.png)
 
-- Go back [home](https://lightsail.aws.amazon.com/ls/webapp/home/instances) and click on [networking](https://lightsail.aws.amazon.com/ls/webapp/home/networking) so that you arrive at this tab
+Go back [home](https://lightsail.aws.amazon.com/ls/webapp/home/instances) and click on [networking](https://lightsail.aws.amazon.com/ls/webapp/home/networking) so that you arrive at this tab
 
 ![networktab](images/networking.png)
 
-- Click on **_Create DNS zone_** and enter your domain here
+Click on **_Create DNS zone_** and enter your domain here
 
 ![domain](images/domain.png)
 
 > I personally use [Google Domains](https://domains.google.com/registrar/) to buy my domains but if you prefer to stay in the ecosystem, Amazon has their own solution called [Route53](https://aws.amazon.com/route53/)
+
+Click `create` and add two `A` records
+
+The first one should be `@` in the first box on the left and `Resolves to` should be the static IP address we created a few steps ago
+![rs](images/arcrd1.png)
+
+Your second one should be `www` in the first box and once more, select your static IP
+
+![added](images/addedARecords.png)
