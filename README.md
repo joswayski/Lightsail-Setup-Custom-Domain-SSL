@@ -42,14 +42,15 @@ Click on **_Create DNS zone_** and enter your domain here
 
 Click `create` and add two `A` records
 
-The first one should be `@` in the first box on the left and `Resolves to` should be the static IP address we created a few steps ago
+The first one should be `@` in the `Subdomain` and `Resolves to` should be the static IP address we created a few steps ago
+
 ![rs](images/arcrd1.png)
 
-Your second one should be `www` in the first box and once more, select your static IP
+Your second subdomain should be `www` in the first box and once more, select your static IP
 
 ![added](images/addedARecords.png)
 
-Add the name servers that Amazon provides you to your domain in your registrar's settings. The following is for Google Domains:
+Add the name servers that Amazon provides you to your domain in your domain `DNS` settings. The following is for Google Domains:
 
 ![ns](images/namesrvr.png)
 ![gd](images/gdns.png)
