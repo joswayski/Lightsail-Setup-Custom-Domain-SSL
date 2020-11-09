@@ -107,4 +107,75 @@ Now we have to route HTTP traffic on `port 80` and all HTTPS traffic on `port 44
 
 > [Here](https://docs.bitnami.com/ibm/infrastructure/nodejs/administration/create-custom-application-nodejs/) is the documentation from Bitnami directly, or you can follow my steps below
 
-Feel free to delete the firewall rule on port 3000 we created earlier. Do not hesitate for any PR's or issues. Happy developing!
+Stop your Node app in the SSH terminal
+`Control + C` on Mac, I believe it is the same for Windows.
+
+In the terminal, type in `vi /opt/bitnami/apache/conf/vhosts/myapp-http-vhost.conf` and press enter
+
+Type `i` for `INSERT` mode
+
+Visit [this link](https://docs.bitnami.com/ibm/infrastructure/nodejs/administration/create-custom-application-nodejs/) and copy this code for port 80
+
+![bitnami1](images/bitnami1.png)
+
+### IMPORTANT:
+
+- Replace _both_ instances of `/opt/bitnami/projects/myapp/public` with your app directory which, if you followed my tutorial, is in `/home/bitnami/htdocs/Lightsail-Setup-Custom-Domain-SSL`
+
+![rme1](images/rme80.png)
+
+Press your ESCAPE key
+
+`esc`
+
+And then force save
+
+`:w!`
+
+Quit the editor
+
+`:q`
+
+Now do the same thing for the other port:
+
+`vi /opt/bitnami/apache/conf/vhosts/myapp-https-vhost.conf`
+
+`ENTER`
+
+`i` to enter `INSERT` mode
+
+Copy and paste the second part
+
+![bitnami2](images/bitnami2.png)
+
+**Again**, be sure to replace the `/opt/bitnami/projects/myapp` with **your** app directory, or if you are following this tutorial: `/home/bitnami/htdocs/Lightsail-Setup-Custom-Domain-SSL`
+
+![rm443](images/rme443.png)
+
+Escape, force save, and quit the editor.
+
+`esc`
+
+`:w!`
+
+`:q`
+
+Restart the Apache server
+
+`sudo /opt/bitnami/ctlscript.sh restart apache`
+
+If you go back to your directory and run your app:
+
+`cd /home/bitnami/htdocs/Lightsail-Setup-Custom-Domain-SSL`
+
+`node index.js`
+
+You will be able to visit your site without putitng the port number at the end!
+
+![noport](images/noport.png)
+
+## #TODO Add SSL and custom domain
+
+---
+
+Feel free to delete the firewall rule on port 3000 we created earlier. Do not hesitate for any PR's or issues. Happy hosting!
