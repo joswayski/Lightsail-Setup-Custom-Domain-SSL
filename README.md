@@ -94,4 +94,17 @@ Install the dependencies
 Run the app to test it!
 
 `node index.js`
+
+![installed](images/i.png)
+
+You should see: `Example app listening at http://localhost:3000`
+
+If you go to your static IP from earlier and add `:3000` at the end, you should be able to see something like this:
+
+![up](images/upnrunning.png)
+
+Now we have to route HTTP traffic on `port 80` and all HTTPS traffic on `port 443` to our server's port, `3000`
+
+> [Here](https://docs.bitnami.com/ibm/infrastructure/nodejs/administration/create-custom-application-nodejs/) is the documentation from Bitnami directly, or you can follow my steps below
+
 Feel free to delete the firewall rule on port 3000 we created earlier. Do not hesitate for any PR's or issues. Happy developing!
