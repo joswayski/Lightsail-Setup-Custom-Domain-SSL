@@ -1,10 +1,10 @@
 # Deploy a Node / Express app on AWS Lightsail with a Custom Domain + SSL
 
-[Video Tutorial](https://www.youtube.com/watch?v=rtshCulV2hk)
+-------------> [Video Tutorial](https://www.youtube.com/watch?v=rtshCulV2hk) <-------------
 
-- Create a Lightsail instance from the AWS dashboard
+### Steps below if you prefer images
 
-[Dashboard Link](https://lightsail.aws.amazon.com/ls/webapp/home/instances)
+- Create a Lightsail instance from the [AWS dashboard](https://lightsail.aws.amazon.com/ls/webapp/home/instances)
 
 ![Dashboard Image](images/dash1.png)
 
