@@ -38,6 +38,8 @@ Click on **_Create DNS zone_** and enter your domain here
 
 > I personally use [Google Domains](https://domains.google.com/registrar/) to buy my domains but if you prefer to stay in the ecosystem, Amazon has their own solution called [Route53](https://aws.amazon.com/route53/)
 
+> I will be using `opensourceme.app` for the rest of this tutorial as I have this one for testing
+
 Click `create` and add two `A` records
 
 The first one should be `@` in the first box on the left and `Resolves to` should be the static IP address we created a few steps ago
@@ -46,3 +48,8 @@ The first one should be `@` in the first box on the left and `Resolves to` shoul
 Your second one should be `www` in the first box and once more, select your static IP
 
 ![added](images/addedARecords.png)
+
+Add the name servers that Amazon provides you to your domain in your registrar's settings. The following is for Google Domains:
+
+![ns](images/namesrvr.png)
+![gd](images/gdns.png)
